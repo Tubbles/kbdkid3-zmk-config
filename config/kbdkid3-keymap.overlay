@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+		default_layer {
+				// -----------------------------------------------------------------------------------------
+				// |  ESC |  Q  |  W  |  E  |  R  |  T  |             |  Y  |  U   |  I  |  O  |  P  | BKSP |
+				// |  TAB |  A  |  S  |  D  |  F  |  G  |             |  Y  |  U   |  I  |  O  |  P  | BKSP |
+				// | SHFT |  Z  |  X  |  C  |  V  |  B  |             |  H  |  J   |  K  |  L  |  ;  |  '   |
+				// | CTRL |  Z  |  X  |  C  |  V  |  B  | SPACE | RET |  N  |  M   |  ,  |  .  |  /  | ESC  |
+			bindings = <
+				&kp ESC   &kp Q &kp W &kp E &kp R &kp T                   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+				&kp TAB   &kp A &kp S &kp D &kp F &kp G                   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B                   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+				&kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp SPACE &kp RET &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+			>;
+		};
+	};
+};

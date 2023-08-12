@@ -1,0 +1,8 @@
+# Copyright (c) 2023 Tubbles
+# SPDX-License-Identifier: MIT
+
+config SHIELD_KBDKID3_LEFT
+    def_bool $(shields_list_contains,kbdkid3_left)
+
+config SHIELD_KBDKID3_RIGHT
+    def_bool $(shields_list_contains,kbdkid3_right)
