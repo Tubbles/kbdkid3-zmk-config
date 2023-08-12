@@ -17,3 +17,5 @@ include:
     shield: kbdkid3_left
   - board: nice_nano_v2
     shield: kbdkid3_right
+  - board: nice_nano_v2
+    shield: settings_reset
