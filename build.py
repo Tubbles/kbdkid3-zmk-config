@@ -26,10 +26,10 @@ layout = {
         | &trans | &trans | &trans | &trans | &trans | &trans | &trans |
         """,
         """
-        |        | &kp F6 | &kp F7 | &kp F8 | &kp F9 | &kp F10 | &kp DEL |
-        |        | &none  | &none  | &none  | &none  | &kp F11 | &kp F12 |
-        |        | &none  | &none  | &none  | &none  | &none   | &trans  |
-        | &trans | &trans | &trans | &trans | &trans | &trans  | &trans  |
+        |        | &kp F6 | &kp F7 | &kp F8    | &kp F9    | &kp F10 | &kp DEL |
+        |        | &none  | &none  | &kp MINUS | &kp EQUAL | &kp F11 | &kp F12 |
+        |        | &none  | &none  | &none     | &none     | &none   | &trans  |
+        | &trans | &trans | &trans | &trans    | &trans    | &trans  | &trans  |
         """
     ],
 
