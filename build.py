@@ -4,16 +4,16 @@ layout = {
     "base":
     [
         """
-        | &kp ESC   | &kp Q    | &kp W    | &kp E     | &kp R     | &kp T     |           |
-        | &kp TAB   | &kp A    | &kp S    | &kp D     | &kp F     | &kp G     |           |
-        | &kp LSHFT | &kp Z    | &kp X    | &kp C     | &kp V     | &kp B     |           |
-        | &kp LCTRL | &kp LGUI | &kp LALT | &mo MOUSE | &mo RAISE | &mo LOWER | &kp SPACE |
+        | &kp ESC   | &kp Q    | &kp W      | &kp E    | &kp R     | &kp T     |           |
+        | &kp TAB   | &kp A    | &kp S      | &kp D    | &kp F     | &kp G     |           |
+        | &kp LSHFT | &kp Z    | &kp X      | &kp C    | &kp V     | &kp B     |           |
+        | &kp LCTRL | &kp LGUI | &tog MOUSE | &kp LALT | &mo RAISE | &mo LOWER | &kp SPACE |
         """,
         """
-        |         | &kp Y     | &kp U     | &kp I     | &kp O    | &kp P     | &kp BSPC  |
-        |         | &kp H     | &kp J     | &kp K     | &kp L    | &kp SEMI  | &kp SQT   |
-        |         | &kp N     | &kp M     | &kp COMMA | &kp DOT  | &kp SLASH | &kp RSHFT |
-        | &kp RET | &mo LOWER | &mo RAISE | &mo MISC  | &kp RALT | &kp RGUI  | &kp RCTRL |
+        |         | &kp Y     | &kp U     | &kp I     | &kp O     | &kp P     | &kp BSPC  |
+        |         | &kp H     | &kp J     | &kp K     | &kp L     | &kp SEMI  | &kp SQT   |
+        |         | &kp N     | &kp M     | &kp COMMA | &kp DOT   | &kp SLASH | &kp RSHFT |
+        | &kp RET | &mo LOWER | &mo RAISE | &kp RALT  | &tog MISC | &kp RGUI  | &kp RCTRL |
         """
     ],
 
