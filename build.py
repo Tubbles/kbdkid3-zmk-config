@@ -70,16 +70,16 @@ layout = {
     "mouse":
     [
         """
-        | &to CONF | &none  | &none      | &none  | &none  | &none  |        |
-        | &trans   | &none  | &none      | &none  | &none  | &none  |        |
-        | &trans   | &none  | &none      | &none  | &none  | &none  |        |
-        | &trans   | &trans | &tog MOUSE | &trans | &trans | &trans | &trans |
+        | &to CONF | &none | &none      | &none | &none | &none |       |
+        | &none    | &none | &none      | &none | &none | &none |       |
+        | &none    | &none | &none      | &none | &none | &none |       |
+        | &none    | &none | &tog MOUSE | &none | &none | &none | &none |
         """,
         """
-        |        | &none  | &none  | &none  | &none      | &none  | &trans |
-        |        | &none  | &none  | &none  | &none      | &none  | &none  |
-        |        | &none  | &none  | &none  | &none      | &none  | &trans |
-        | &trans | &trans | &trans | &trans | &tog MOUSE | &trans | &trans |
+        |       | &none | &none | &none | &none      | &none | &none |
+        |       | &none | &none | &none | &none      | &none | &none |
+        |       | &none | &none | &none | &none      | &none | &none |
+        | &none | &none | &none | &none | &tog MOUSE | &none | &none |
         """
     ],
 
