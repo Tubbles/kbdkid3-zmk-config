@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE    0
-#define RAISE   1
+#define NAV     1
 #define LOWER   2
 #define MISC    3
 #define MOUSE   4
@@ -22,34 +22,34 @@
         compatible = "zmk,keymap";
         base_layer {
             bindings = <
-                &kp ESC    &kp Q     &kp W       &kp E     &kp R      &kp T                          &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
-                &kp TAB    &kp A     &kp S       &kp D     &kp F      &kp G                          &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
-                &kp LSHFT  &kp Z     &kp X       &kp C     &kp V      &kp B                          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH  &kp RSHFT
-                &kp LCTRL  &kp LGUI  &tog MOUSE  &kp LALT  &mo RAISE  &mo LOWER  &kp SPACE  &kp RET  &mo LOWER  &mo RAISE  &kp RALT   &tog MISC  &kp RGUI   &kp RCTRL
+                &kp ESC    &kp Q     &kp W     &kp E     &kp R    &kp T                          &kp Y      &kp U    &kp I      &kp O     &kp P      &kp BSPC
+                &kp TAB    &kp A     &kp S     &kp D     &kp F    &kp G                          &kp H      &kp J    &kp K      &kp L     &kp SEMI   &kp SQT
+                &kp LSHFT  &kp Z     &kp X     &kp C     &kp V    &kp B                          &kp N      &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp RSHFT
+                &kp LCTRL  &kp LGUI  &kp LALT  &kp LALT  &mo NAV  &mo LOWER  &kp SPACE  &kp RET  &mo LOWER  &mo NAV  &kp RALT   &kp RALT  &kp RGUI   &kp RCTRL
             >;
         };
-        raise_layer {
+        nav_layer {
             bindings = <
-                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7     &kp F8     &kp F9     &kp F10  &kp DEL
-                &trans  &none   &none   &none   &none   &none                   &none   &kp GRAVE  &kp MINUS  &kp EQUAL  &kp F11  &kp F12
-                &trans  &none   &none   &none   &none   &none                   &none   &none      &none      &none      &none    &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans   &trans
+                &trans  &kp F1  &kp F2      &kp F3  &kp F4  &kp F5                     &kp F6     &kp F7    &kp F8     &kp F9     &kp F10    &trans
+                &trans  &none   &none       &none   &none   &kp F11                    &kp F12    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp INS
+                &trans  &none   &none       &none   &none   &kp K_APP                  &kp K_APP  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
+                &trans  &trans  &tog MOUSE  &trans  &trans  &trans     &trans  &trans  &trans     &trans    &trans     &tog MISC  &trans     &trans
             >;
         };
         lower_layer {
             bindings = <
-                &kp GRAVE  &kp N1  &kp N2         &kp N3         &kp N4             &kp N5                     &kp N6    &kp N7    &kp N8     &kp N9     &kp N0     &kp INS
-                &trans     &none   &none          &none          &ext_power EP_TOG  &kp LBKT                   &kp RBKT  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSLH
-                &trans     &none   &kp LC(LS(X))  &kp LC(LS(C))  &kp LC(LS(V))      &kp K_APP                  &none     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-                &trans     &trans  &trans         &trans         &trans             &trans     &trans  &trans  &trans    &trans    &trans     &trans     &trans     &trans
+                &kp GRAVE  &kp N1     &kp N2         &kp N3         &kp N4         &kp N5                  &kp N6     &kp N7     &kp N8     &kp N9     &kp N0    &kp DEL
+                &trans     &kp PSCRN  &none          &none          &none          &none                   &kp GRAVE  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
+                &trans     &none      &kp LC(LS(X))  &kp LC(LS(C))  &kp LC(LS(V))  &none                   &none      &none      &none      &kp LT     &kp GT    &trans
+                &trans     &trans     &tog MOUSE     &trans         &trans         &trans  &trans  &trans  &trans     &trans     &trans     &tog MISC  &trans    &trans
             >;
         };
         misc_layer {
             bindings = <
-                &to CONF  &none       &none       &none         &none         &none                             &kp KP_NLCK  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_DIVIDE    &kp KP_MINUS
-                &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE                        &none        &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY  &kp KP_PLUS
-                &trans    &kp PSCRN   &none       &none         &none         &none                             &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &trans
-                &trans    &trans      &trans      &trans        &trans        &trans      &trans  &kp KP_ENTER  &trans       &trans     &trans     &trans     &trans           &trans
+                &to CONF  &none       &none       &none         &none         &none                             &kp KP_NLCK  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY  &kp KP_MINUS
+                &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE                        &none        &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE    &kp KP_PLUS
+                &trans    &none       &none       &none         &none         &none                             &kp KP_N0    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT       &trans
+                &trans    &trans      &tog MISC      &trans        &trans        &trans      &trans  &kp KP_ENTER  &trans       &trans     &trans     &tog MISC     &trans           &trans
             >;
         };
         mouse_layer {
@@ -57,15 +57,15 @@
                 &to CONF  &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none   &trans
                 &trans    &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none   &none
                 &trans    &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none   &trans
-                &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans    &trans  &tog MOUSE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &tog MOUSE  &trans  &trans
             >;
         };
         conf_layer {
             bindings = <
-                &to BASE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &none        &none  &none  &none  &none  &to BASE
-                &none     &bt BT_CLR    &none         &none         &none         &sys_reset                  &sys_reset   &none  &none  &none  &none  &none
-                &none     &out OUT_BLE  &out OUT_USB  &none         &none         &bootloader                 &bootloader  &none  &none  &none  &none  &none
-                &none     &none         &none         &none         &none         &none         &none  &none  &none        &none  &none  &none  &none  &none
+                &to BASE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4                &none        &none  &none  &none  &none  &to BASE
+                &none     &bt BT_CLR    &none         &none         &ext_power EP_TOG  &sys_reset                  &sys_reset   &none  &none  &none  &none  &none
+                &none     &out OUT_BLE  &out OUT_USB  &none         &none              &bootloader                 &bootloader  &none  &none  &none  &none  &none
+                &none     &none         &none         &none         &none              &none         &none  &none  &none        &none  &none  &none  &none  &none
             >;
         };
     };
