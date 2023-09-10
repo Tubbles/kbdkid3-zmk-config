@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from draw import Drawer
+
 layout = {
     "base":
     [
@@ -145,3 +147,6 @@ if __name__ == "__main__":
     ofs.write("};\n")
 
     ofs.close()
+
+    drawer = Drawer(14, 4, layout)
+    drawer.save("layouts.png")
