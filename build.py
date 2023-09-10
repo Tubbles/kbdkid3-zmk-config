@@ -45,7 +45,7 @@ layout = {
         """,
         """
         |        | &kp N6    | &kp N7    | &kp N8    | &kp N9    | &kp N0   | &kp DEL  |
-        |        | &kp GRAVE | &kp MINUS | &kp EQUAL | &kp LBKT  | &kp RBKT | &kp BSLH |
+        |        | &kp TILDE | &kp MINUS | &kp EQUAL | &kp LBKT  | &kp RBKT | &kp BSLH |
         |        | &none     | &none     | &none     | &kp LT    | &kp GT   | &trans   |
         | &trans | &trans    | &trans    | &trans    | &tog MISC | &trans   | &trans   |
         """
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     ofs = open("config/kbdkid3-keymap.overlay", "w")
 
     ofs.write("/*\n")
-    ofs.write(" * Copyright (c) 2020 Tubbles\n")
+    ofs.write(" * Copyright (c) 2023 Tubbles\n")
     ofs.write(" *\n")
     ofs.write(" * SPDX-License-Identifier: MIT\n")
     ofs.write(" */\n")
