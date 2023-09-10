@@ -26,10 +26,10 @@ layout = {
         | &trans | &trans | &trans | &trans | &trans | &trans | &trans |
         """,
         """
-        |        | &kp F6 | &kp F7 | &kp F8    | &kp F9    | &kp F10 | &kp DEL |
-        |        | &none  | &none  | &kp MINUS | &kp EQUAL | &kp F11 | &kp F12 |
-        |        | &none  | &none  | &none     | &none     | &none   | &trans  |
-        | &trans | &trans | &trans | &trans    | &trans    | &trans  | &trans  |
+        |        | &kp F6 | &kp F7    | &kp F8    | &kp F9    | &kp F10 | &kp DEL |
+        |        | &none  | &kp GRAVE | &kp MINUS | &kp EQUAL | &kp F11 | &kp F12 |
+        |        | &none  | &none     | &none     | &none     | &none   | &trans  |
+        | &trans | &trans | &trans    | &trans    | &trans    | &trans  | &trans  |
         """
     ],
 
@@ -104,7 +104,7 @@ def get_layer_strings(layer):
     left = ["".join(seg) for seg in left_lines]
     right_lines = [s.strip().split("|")[:-1] for s in layer[1].strip().split("\n")]
     right = ["".join(seg) for seg in right_lines]
-    return [(l+r.strip()) for (l, r) in zip(left, right)]
+    return [((l+r).strip()) for (l, r) in zip(left, right)]
 
 
 if __name__ == "__main__":
