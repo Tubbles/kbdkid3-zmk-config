@@ -28,7 +28,7 @@ layout = {
         | &trans | &trans | &tog MOUSE | &trans | &trans | &trans    | &trans |
         """,
         """
-        |        | &kp F6    | &kp F7   | &kp F8    | &kp F9    | &kp F10   | &trans  |
+        |        | &kp F6    | &kp F7   | &kp F8    | &kp F9    | &kp F10   | &kp DEL |
         |        | &kp F12   | &kp LEFT | &kp DOWN  | &kp UP    | &kp RIGHT | &kp INS |
         |        | &kp K_APP | &kp HOME | &kp PG_DN | &kp PG_UP | &kp END   | &trans  |
         | &trans | &trans    | &trans   | &trans    | &tog MISC | &trans    | &trans  |
