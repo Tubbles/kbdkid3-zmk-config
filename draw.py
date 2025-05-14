@@ -36,6 +36,8 @@ class Drawer:
         self._label_table = {
             "BSLH": "|\n\\",
             "BSPC": "⌫",
+            "C_BRI_DN": "🔅",
+            "C_BRI_UP": "🔆",
             "C_MUTE": "🔇",
             "C_NEXT": "⏭",
             "C_PP": "⏯",
@@ -99,7 +101,11 @@ class Drawer:
             "UP": "↑",
         }
 
-        symbol_font2 = ImageFont.truetype("NotoSansSymbols2-Regular.ttf", size=26)
+        emoji_fonts = [
+            ImageFont.truetype("fonts/Noto_Emoji/static/NotoEmoji-Regular.ttf", size=18),
+            ImageFont.truetype("fonts/Noto_Emoji/static/NotoEmoji-Regular.ttf", size=20),
+        ]
+        symbol_font2 = ImageFont.truetype("fonts/Noto_Sans_Symbols_2/NotoSansSymbols2-Regular.ttf", size=26)
         self._font_table = {
             "🔇": symbol_font2,
             "⏭": symbol_font2,
@@ -109,6 +115,8 @@ class Drawer:
             "🔊": symbol_font2,
             "📷": symbol_font2,
             "🗉": symbol_font2,
+            "🔅": emoji_fonts[0],
+            "🔆": emoji_fonts[1],
             "⌫": self._fonts[2],
         }
 
@@ -121,7 +129,7 @@ class Drawer:
     def _draw_name(self, index, name):
         y = self.padding + index * (self._num_rows + 1) * self.stride - 0.1 * self.stride
         font = self._fonts[4]
-        self._draw.text((self.padding, y + self.padding), name, fill="black", font=font)
+        self._draw.text((self.padding, y + self.padding), f"{name} ({index})", fill="black", font=font)
 
     def _draw_button(self, index, side, x, y, label):
         x = x * self.stride + self.padding + side * 7 * self.stride
@@ -148,12 +156,12 @@ class Drawer:
         self._draw.text((x + self.padding, y + self.padding), label, fill=fill, font=font)
 
     def _draw_layout(self):
-        for (index, (layer, keylist)) in enumerate(self._layout.items()):
+        for index, (layer, keylist) in enumerate(self._layout.items()):
             self._draw_name(index, layer)
-            for (side_index, side) in enumerate(keylist):
-                for (line_index, line) in enumerate(side.splitlines()[1:]):
+            for side_index, side in enumerate(keylist):
+                for line_index, line in enumerate(side.splitlines()[1:]):
                     keys = line.split("|")
-                    for (key_index, key) in enumerate(keys[1:]):
+                    for key_index, key in enumerate(keys[1:]):
                         key = key.strip()
                         if key and key != "":
                             key = key.replace("none", "")
