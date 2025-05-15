@@ -19,16 +19,16 @@ layout = {
     ],
     "nav": [
         """
-        | &trans | &kp F1 | &kp F2     | &kp F3 | &kp F4 | &kp F5    |        |
-        | &trans | &none  | &none      | &none  | &none  | &kp F11   |        |
-        | &trans | &none  | &none      | &none  | &none  | &kp K_APP |        |
-        | &trans | &trans | &tog MOUSE | &trans | &trans | &trans    | &trans |
+        | &trans | &kp F1 | &kp F2    | &kp F3 | &kp F4 | &kp F5    |        |
+        | &trans | &none  | &none     | &none  | &none  | &kp F11   |        |
+        | &trans | &none  | &none     | &none  | &none  | &kp K_APP |        |
+        | &trans | &trans | &tog MISC | &trans | &trans | &trans    | &trans |
         """,
         """
-        |        | &kp F6    | &kp F7   | &kp F8    | &kp F9    | &kp F10   | &kp DEL |
-        |        | &kp F12   | &kp LEFT | &kp DOWN  | &kp UP    | &kp RIGHT | &kp INS |
-        |        | &kp K_APP | &kp HOME | &kp PG_DN | &kp PG_UP | &kp END   | &trans  |
-        | &trans | &trans    | &trans   | &trans    | &tog MISC | &trans    | &trans  |
+        |        | &kp F6    | &kp F7   | &kp F8    | &kp F9     | &kp F10   | &kp DEL |
+        |        | &kp F12   | &kp LEFT | &kp DOWN  | &kp UP     | &kp RIGHT | &kp INS |
+        |        | &kp K_APP | &kp HOME | &kp PG_DN | &kp PG_UP  | &kp END   | &trans  |
+        | &trans | &trans    | &trans   | &trans    | &tog MOUSE | &trans    | &trans  |
         """,
     ],
     "lower": [
@@ -36,13 +36,13 @@ layout = {
         | &kp GRAVE | &kp N1    | &kp N2        | &kp N3        | &kp N4        | &kp N5 |        |
         | &trans    | &kp PSCRN | &none         | &none         | &none         | &none  |        |
         | &trans    | &none     | &kp LC(LS(X)) | &kp LC(LS(C)) | &kp LC(LS(V)) | &none  |        |
-        | &trans    | &trans    | &tog MOUSE    | &trans        | &trans        | &trans | &trans |
+        | &trans    | &trans    | &tog MISC     | &trans        | &trans        | &trans | &trans |
         """,
         """
-        |        | &kp N6    | &kp N7    | &kp N8    | &kp N9    | &kp N0   | &kp DEL  |
-        |        | &kp TILDE | &kp MINUS | &kp EQUAL | &kp LBKT  | &kp RBKT | &kp BSLH |
-        |        | &none     | &none     | &none     | &kp LT    | &kp GT   | &trans   |
-        | &trans | &trans    | &trans    | &trans    | &tog MISC | &trans   | &trans   |
+        |        | &kp N6    | &kp N7    | &kp N8    | &kp N9     | &kp N0   | &kp DEL  |
+        |        | &kp TILDE | &kp MINUS | &kp EQUAL | &kp LBKT   | &kp RBKT | &kp BSLH |
+        |        | &none     | &none     | &none     | &kp LT     | &kp GT   | &trans   |
+        | &trans | &trans    | &trans    | &trans    | &tog MOUSE | &trans   | &trans   |
         """,
     ],
     "misc": [
@@ -61,16 +61,16 @@ layout = {
     ],
     "mouse": [
         """
-        | &to CONF | &none | &none      | &none | &none | &none |       |
-        | &none    | &none | &none      | &none | &none | &none |       |
-        | &none    | &none | &none      | &none | &none | &none |       |
-        | &none    | &none | &tog MOUSE | &none | &none | &none | &none |
+        | &to CONF | &none | &none      | &none | &none | &mkp MB5 |          |
+        | &none    | &none | &none      | &none | &none | &mkp MB4 |          |
+        | &none    | &none | &none      | &none | &none | &mkp MB3 |          |
+        | &none    | &none | &tog MOUSE | &none | &none | &mkp MB2 | &mkp MB1 |
         """,
         """
-        |       | &none | &none | &none | &none      | &none | &none |
-        |       | &none | &none | &none | &none      | &none | &none |
-        |       | &none | &none | &none | &none      | &none | &none |
-        | &none | &none | &none | &none | &tog MOUSE | &none | &none |
+        |          | &mkp MB5 | &none          | &none          | &none        | &none           | &none |
+        |          | &mkp MB4 | &mmv MOVE_LEFT | &mmv MOVE_DOWN | &mmv MOVE_UP | &mmv MOVE_RIGHT | &none |
+        |          | &mkp MB3 | &msc SCRL_LEFT | &msc SCRL_DOWN | &msc SCRL_UP | &msc SCRL_RIGHT | &none |
+        | &mkp MB1 | &mkp MB2 | &none          | &none          | &tog MOUSE   | &none           | &none |
         """,
     ],
     "conf": [
@@ -78,13 +78,13 @@ layout = {
         | &to BASE | &bt BT_SEL 0 | &bt BT_SEL 1 | &bt BT_SEL 2 | &bt BT_SEL 3      | &bt BT_SEL 4 |       |
         | &none    | &bt BT_CLR   | &none        | &none        | &ext_power EP_TOG | &sys_reset   |       |
         | &none    | &out OUT_BLE | &out OUT_USB | &none        | &none             | &bootloader  |       |
-        | &none    | &none        | &none        | &none        | &none             | &none        | &none |
+        | &none    | &none        | &none        | &none        | &to BASE          | &to BASE     | &none |
         """,
         """
-        |       | &none       | &none | &none | &none | &none | &to BASE |
-        |       | &sys_reset  | &none | &none | &none | &none | &none    |
-        |       | &bootloader | &none | &none | &none | &none | &none    |
-        | &none | &none       | &none | &none | &none | &none | &none    |
+        |       | &none       | &none    | &none | &none | &none | &to BASE |
+        |       | &sys_reset  | &none    | &none | &none | &none | &none    |
+        |       | &bootloader | &none    | &none | &none | &none | &none    |
+        | &none | &to BASE    | &to BASE | &none | &none | &none | &none    |
         """,
     ],
 }
@@ -112,6 +112,12 @@ if __name__ == "__main__":
     ofs.write("#include <dt-bindings/zmk/ext_power.h>\n")
     ofs.write("#include <dt-bindings/zmk/keys.h>\n")
     ofs.write("#include <dt-bindings/zmk/outputs.h>\n")
+    ofs.write("\n")
+    ofs.write("#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600\n")
+    ofs.write("#define ZMK_POINTING_DEFAULT_SCRL_VAL 600  // default: 10\n")  # For smooth scrolling
+    ofs.write("\n")
+    ofs.write("#include <dt-bindings/zmk/pointing.h>\n")
+    ofs.write("#include <input/processors.dtsi>\n")
     ofs.write("\n")
 
     layer_serial = 0
