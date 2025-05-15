@@ -15,3 +15,5 @@ dnf install google-noto-sans-symbols-2-fonts
 ![layouts](layouts.png "layouts")
 
 ## TODO
+
+Fix different mouse speeds
