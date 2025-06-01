@@ -6,3 +6,7 @@ config SHIELD_KBDKID3_LEFT
 
 config SHIELD_KBDKID3_RIGHT
     def_bool $(shields_list_contains,kbdkid3_right)
+
+config SHIELD_KBDKID3_DONGLE
+    def_bool $(shields_list_contains,kbdkid3_dongle)
+
