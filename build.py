@@ -78,13 +78,13 @@ layout = {
         | &none | &bt BT_SEL 0 | &bt BT_SEL 1 | &bt BT_SEL 2 | &bt BT_SEL 3      | &bt BT_SEL 4 |       |
         | &none | &bt BT_CLR   | &none        | &none        | &ext_power EP_TOG | &sys_reset   |       |
         | &none | &out OUT_BLE | &out OUT_USB | &none        | &none             | &bootloader  |       |
-        | &none | &none        | &none        | &none        | &tog BASE         | &tog BASE    | &none |
+        | &none | &none        | &none        | &none        | &tog CONF         | &tog CONF    | &none |
         """,
         """
         |       | &none       | &none     | &none | &none | &none | &none |
         |       | &sys_reset  | &none     | &none | &none | &none | &none |
         |       | &bootloader | &none     | &none | &none | &none | &none |
-        | &none | &tog BASE   | &tog BASE | &none | &none | &none | &none |
+        | &none | &tog CONF   | &tog CONF | &none | &none | &none | &none |
         """,
     ],
 }
