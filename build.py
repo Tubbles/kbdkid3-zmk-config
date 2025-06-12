@@ -27,7 +27,7 @@ layout = {
         """
         |        | &kp N6    | &kp N7    | &kp N8    | &kp N9   | &kp N0   | &kp DEL  |
         |        | &kp TILDE | &kp MINUS | &kp EQUAL | &kp LBKT | &kp RBKT | &kp BSLH |
-        |        | &kp K_APP | &none     | &none     | &kp LT   | &kp GT   | &trans   |
+        |        | &kp K_APP | &none     | &trans    | &trans   | &trans   | &trans   |
         | &trans | &trans    | &trans    | &trans    | &trans   | &trans   | &trans   |
         """,
     ],
