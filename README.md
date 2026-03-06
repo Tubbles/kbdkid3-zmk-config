@@ -22,4 +22,5 @@ the flashing as normal.
 
 ## TODO
 
-Fix different mouse speeds
+- Fix the nice!views not working
+- Fix different mouse speeds
